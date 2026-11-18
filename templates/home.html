@@ -1,0 +1,15 @@
+{% extends "base.html" %}{% block title %}Home{% endblock %}{% block content %}
+<section class="hero"><div class="hero-copy"><div class="kicker"><span class="pulse"></span> WEB APPLICATION SECURITY · AUTHENTICATION</div>
+<h1>Make every<br><em>sign-in safer.</em></h1><p class="lead">A hands-on authentication security lab demonstrating how secure account creation, password storage, login protection and session controls work together.</p>
+<div class="actions"><a class="btn primary" href="{{ url_for('register') }}">Try the secure sign-up <b>→</b></a><a class="btn ghost" href="{{ url_for('security_check') }}">View security controls</a></div>
+<div class="hero-note"><span>●</span> Runs locally on your computer · No external target scanning</div></div>
+<div class="hero-visual"><div class="orb"></div><div class="auth-card"><div class="auth-top"><span class="mini-shield">◆</span><span class="status">PROTECTED</span></div><div class="avatar">AG</div><h3>Identity verified</h3><p>Authentication controls active</p><div class="checkline"><span>✓</span> Password hashing</div><div class="checkline"><span>✓</span> Login attempt limit</div><div class="checkline"><span>✓</span> Secure session settings</div><div class="scanline"></div></div><div class="float-tag tag-one">01 / AUTHENTICATE</div><div class="float-tag tag-two">02 / PROTECT SESSION</div></div></section>
+<section class="section"><div class="section-head"><div><div class="kicker">WHAT THIS LAB DEMONSTRATES</div><h2>Security built into the sign-in flow.</h2></div><p>Explore practical defensive controls in a small web application.</p></div>
+<div class="feature-grid">
+<article class="feature"><div class="feature-icon">⌁</div><h3>Password protection</h3><p>Passwords are stored as one-way password hashes rather than readable text.</p><span>01 / STORAGE</span></article>
+<article class="feature"><div class="feature-icon">◉</div><h3>Login attempt control</h3><p>Repeated failed sign-in attempts trigger a temporary account lockout.</p><span>02 / AUTHENTICATION</span></article>
+<article class="feature"><div class="feature-icon">◈</div><h3>Session safeguards</h3><p>HttpOnly and SameSite cookie settings help protect session handling.</p><span>03 / SESSION</span></article>
+<article class="feature"><div class="feature-icon">⌗</div><h3>Security event log</h3><p>Successful and unsuccessful sign-in activity is recorded for review.</p><span>04 / MONITORING</span></article>
+</div></section>
+<section class="bottom-cta"><div><div class="kicker">INTERACTIVE DEMONSTRATION</div><h2>Test the controls yourself.</h2><p>Create a local account, sign in and inspect the security console.</p></div><a class="btn primary" href="{{ url_for('register') }}">Launch the lab →</a></section>
+{% endblock %}

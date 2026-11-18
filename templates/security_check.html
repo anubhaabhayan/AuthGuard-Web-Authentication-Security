@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block title %}Security check{% endblock %}{% block content %}
+<div class="kicker">LOCAL APPLICATION INSPECTION</div><h1>Security <em>configuration.</em></h1><p class="lead">These are the controls configured by AuthGuard itself. This page does not inspect or scan any external website.</p>
+<div class="panel"><div class="panel-head"><h2>Configured response and session controls</h2><span class="live-chip"><i></i> LOCAL APP</span></div>{% for name,value,description in checks %}<div class="security-row"><div class="secure-check">✓</div><div class="security-copy"><b>{{ name }}</b><p>{{ description }}</p></div><span class="configured">{{ value }}</span></div>{% endfor %}</div>
+<div class="tip">Note: A configuration indicator is not proof that an application is free from vulnerabilities. Security testing must include context, verification and authorized scope.</div>
+{% endblock %}
