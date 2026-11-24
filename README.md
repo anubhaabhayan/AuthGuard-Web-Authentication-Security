@@ -2,15 +2,16 @@
 
 ### A Flask-Based Web Authentication and Security Project
 
-**Developed by: Anubha Abhayan
-**Course: Master of computer applications
-  
+**Developed By: ANUBHA ABHAYAN**
+
+**Project Type:** MCA Mini Project  
+**Subject:** INFORMATION SECURITY
 
 ---
 
 ## 1. Introduction
 
-AuthGuard is a Python Flask-based web application developed by Anubha Abhayan to demonstrate secure user authentication and essential web application security mechanisms.
+AuthGuard – Web Authentication Security is a Python Flask-based web application developed by **ANUBHA ABHAYAN** as a mini project for the subject **Information Security**.
 
 In today's digital world, web applications handle sensitive user information and require strong security mechanisms to prevent unauthorized access and common cyber threats.
 
@@ -18,7 +19,7 @@ AuthGuard demonstrates how authentication-related risks can be reduced through p
 
 The project provides an interactive environment where users can register, log in, and explore security-related features.
 
-It has been developed as an academic Information Security mini project to gain practical knowledge of cybersecurity and secure web application development.
+It has been developed to gain practical knowledge of cybersecurity concepts and secure web application development.
 
 ## 2. Project Objectives
 
@@ -45,12 +46,12 @@ AuthGuard provides an interactive web interface with authentication and security
 - **Brute-Force Protection:** Monitors unsuccessful login attempts.
 - **Temporary Account Lockout:** Applies a two-minute lockout after five failed attempts.
 - **CSRF Protection:** Validates CSRF tokens on POST forms.
-- **Session Management:** Configures secure session cookie settings.
+- **Session Management:** Configures session cookie security settings.
 - **Security Event Logging:** Stores authentication-related events.
 - **HTTP Security Headers:** Demonstrates browser security response headers.
 - **Security Console:** Provides access to account-related security information.
 
-## 4. Project Technologies
+## 4. Technologies Used
 
 | Technology | Purpose |
 |---|---|
@@ -72,9 +73,9 @@ The user interacts with the web interface, while the Flask backend handles authe
 
 ### System Architecture Diagram
 
-The following diagram illustrates the major components of the application.
+The following diagram illustrates the major components and workflow of the AuthGuard application.
 
-![AuthGuard Project Architecture](authguard-project-overview.png)
+![AuthGuard Project Architecture Diagram](authguard-project-overview.png)
 
 ### Application Workflow
 
@@ -86,9 +87,11 @@ The following diagram illustrates the major components of the application.
 6. Authenticated users can access the security console.
 7. Security-related events are stored in the SQLite database.
 
-## 6. Login Page Screenshot
+## 6. Project Screenshots
 
-The following image showcases the AuthGuard login interface.
+### 6.1 Login Page
+
+The following screenshot showcases the AuthGuard login interface, designed to provide a modern and user-friendly authentication experience.
 
 ![AuthGuard Login Page](authguard-ui-preview.png)
 
@@ -210,7 +213,7 @@ The following steps can be used to demonstrate the project:
 
 ## 13. Learning Outcomes
 
-This project helped demonstrate practical concepts related to:
+This project demonstrates practical concepts related to:
 
 - Web application authentication.
 - Password hashing and verification.
@@ -245,10 +248,12 @@ This project helped demonstrate practical concepts related to:
 | Field | Details |
 |---|---|
 | Project Name | AuthGuard – Web Authentication Security |
-| Developed By | Anubha Abhayan |
-| Project Type | MCA Information Security Mini Project |
+| Developed By | ANUBHA ABHAYAN |
+| Course | Master of Computer Applications (MCA) |
+| Project Type | Mini Project |
+| Subject | Information Security |
 | Domain | Cybersecurity |
-| Language | Python |
+| Programming Language | Python |
 | Framework | Flask |
 | Database | SQLite |
 | Frontend | HTML, CSS, JavaScript |
@@ -261,12 +266,14 @@ https://github.com/anubhaabhayan/AuthGuard-Web-Authentication-Security
 
 ## 18. Disclaimer
 
-This project is developed for educational and demonstration purposes. It should not be considered a fully production-ready authentication platform.
+This project has been developed for educational and demonstration purposes as part of the Information Security subject.
 
-Use demonstration credentials only. Before public deployment, configure a strong secret key, HTTPS, secure cookie settings, a production-ready server, and conduct an appropriate security review.
+It should not be considered a fully production-ready authentication platform. Use demonstration credentials only. Before public deployment, configure a strong secret key, HTTPS, secure cookie settings, a production-ready server, and conduct an appropriate security review.
 
 ---
 
-**Developed by Anubha Abhayan**
+**Developed By: ANUBHA ABHAYAN**
+
+**MCA Mini Project | INFORMATION SECURITY**
 
 *AuthGuard – Because Security Matters!*
