@@ -1,192 +1,155 @@
 # 🛡️ AuthGuard – Web Authentication Security
 
-### A Flask-Based Web Authentication and Security Demonstration Project
+### A Flask-Based Web Authentication and Security Project
 
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/Framework-Flask-black.svg)](https://flask.palletsprojects.com/)
-[![SQLite](https://img.shields.io/badge/Database-SQLite-blue.svg)](https://www.sqlite.org/)
-[![Security](https://img.shields.io/badge/Focus-Web%20Security-green.svg)](https://owasp.org/)
+**Developed by: Anubha Abhayan
+**Course: Master of computer applications
+  
 
 ---
 
-## 📌 Project Overview
+## 1. Introduction
 
-**AuthGuard – Web Authentication Security** is a Python Flask-based web application developed to demonstrate essential authentication and web application security mechanisms.
+AuthGuard is a Python Flask-based web application developed by Anubha Abhayan to demonstrate secure user authentication and essential web application security mechanisms.
 
-The project focuses on protecting user accounts against common authentication-related threats through password hashing, brute-force protection, temporary account lockout, CSRF validation, secure session management, and HTTP security headers.
+In today's digital world, web applications handle sensitive user information and require strong security mechanisms to prevent unauthorized access and common cyber threats.
 
-AuthGuard provides an interactive environment where users can register, log in, access a personal security console, and observe security-related events.
+AuthGuard demonstrates how authentication-related risks can be reduced through password hashing, password complexity validation, brute-force attack protection, temporary account lockout, CSRF protection, secure session management, and HTTP security headers.
 
-It is developed as an educational Information Security mini project to understand how authentication mechanisms and security controls can be implemented in a web application.
+The project provides an interactive environment where users can register, log in, and explore security-related features.
 
-## 🎯 Project Objectives
+It has been developed as an academic Information Security mini project to gain practical knowledge of cybersecurity and secure web application development.
 
-- To develop a secure user authentication system.
-- To understand password hashing and password complexity validation.
-- To prevent repeated unauthorized login attempts.
-- To implement temporary account lockout against brute-force attempts.
-- To protect forms using CSRF tokens.
-- To understand secure session and cookie management.
-- To implement HTTP security response headers.
-- To maintain authentication and security event records.
-- To demonstrate practical web application security concepts.
+## 2. Project Objectives
 
-## ✨ Key Features
+- Develop a secure web-based authentication system.
+- Understand password hashing and verification.
+- Implement password complexity validation.
+- Demonstrate brute-force attack protection.
+- Implement temporary account lockout.
+- Understand CSRF protection.
+- Improve session and cookie security.
+- Configure HTTP security response headers.
+- Maintain authentication and security event records.
 
-### 1. User Registration
-- User account creation.
-- Password complexity validation.
-- Secure password storage using Werkzeug password hashing.
+## 3. Project Overview
 
-### 2. Secure Login Authentication
-- Username and password verification.
-- Password hash verification.
-- Authentication session management.
+AuthGuard provides an interactive web interface with authentication and security-related functionality.
 
-### 3. Password Complexity Validation
-The application enforces password requirements, including:
+### Main Features
+
+- **User Registration:** Allows users to create accounts.
+- **Secure Login:** Authenticates registered users.
+- **Password Hashing:** Uses Werkzeug password hashing.
+- **Password Validation:** Enforces password complexity requirements.
+- **Brute-Force Protection:** Monitors unsuccessful login attempts.
+- **Temporary Account Lockout:** Applies a two-minute lockout after five failed attempts.
+- **CSRF Protection:** Validates CSRF tokens on POST forms.
+- **Session Management:** Configures secure session cookie settings.
+- **Security Event Logging:** Stores authentication-related events.
+- **HTTP Security Headers:** Demonstrates browser security response headers.
+- **Security Console:** Provides access to account-related security information.
+
+## 4. Project Technologies
+
+| Technology | Purpose |
+|---|---|
+| Python | Backend programming |
+| Flask | Web framework |
+| SQLite | Database |
+| HTML5 | Web page structure |
+| CSS3 | Interface styling |
+| JavaScript | Client-side functionality |
+| Werkzeug | Password hashing |
+| Jinja2 | Template rendering |
+| Visual Studio Code | Development environment |
+
+## 5. Project Architecture
+
+AuthGuard follows a client-server architecture.
+
+The user interacts with the web interface, while the Flask backend handles authentication requests and security operations. SQLite is used for storing application data and security events.
+
+### System Architecture Diagram
+
+The following diagram illustrates the major components of the application.
+
+![AuthGuard Project Architecture](authguard-project-overview.png)
+
+### Application Workflow
+
+1. The user opens the AuthGuard web application.
+2. The user registers or logs in.
+3. The Flask backend processes the request.
+4. Password verification and security checks are performed.
+5. Login attempts are monitored.
+6. Authenticated users can access the security console.
+7. Security-related events are stored in the SQLite database.
+
+## 6. Login Page Screenshot
+
+The following image showcases the AuthGuard login interface.
+
+![AuthGuard Login Page](authguard-ui-preview.png)
+
+## 7. Password Security
+
+AuthGuard demonstrates password complexity validation and secure password storage.
+
+The password policy requires:
+
 - Minimum 10 characters.
 - At least one uppercase letter.
 - At least one lowercase letter.
 - At least one number.
 - At least one special character.
 
-### 4. Brute-Force Attack Protection
-- Monitors repeated unsuccessful login attempts.
-- Tracks login attempts for individual usernames.
-- Temporarily locks an account after five failed attempts.
-- Applies a two-minute lockout period for demonstration purposes.
+Passwords are stored using Werkzeug password hashing rather than being stored as plain text.
 
-### 5. CSRF Protection
-- Generates CSRF tokens for POST forms.
-- Validates submitted tokens to help prevent Cross-Site Request Forgery attacks.
+## 8. Brute-Force Attack Protection
 
-### 6. Secure Session Management
-- Uses Flask session management.
-- Configures HttpOnly cookie protection.
-- Configures SameSite cookie settings.
+Repeated unsuccessful login attempts can indicate a brute-force attack.
 
-### 7. Security Event Logging
-- Stores user and security-related events in SQLite.
-- Helps demonstrate authentication activity and security monitoring.
+AuthGuard demonstrates a basic protection mechanism:
 
-### 8. HTTP Security Headers
-Implements security response headers to improve browser-side protection and demonstrate secure web application configuration.
+- Monitors failed login attempts.
+- Applies a temporary account lockout after five failed attempts.
+- Uses a two-minute lockout period for educational demonstration.
 
-### 9. Personal Security Console
-- Provides an authenticated area for users.
-- Displays security-related information and recorded events.
+## 9. Database
 
-### 10. Security Check
-Provides a section for demonstrating the security response headers configured by the application.
+The application uses SQLite for storing user information and security-related events.
 
----
+The database supports the authentication and event logging functionality of the application.
 
-## 🛠️ Technologies Used
-
-| Technology | Purpose |
-|---|---|
-| Python | Backend programming |
-| Flask | Web application framework |
-| SQLite | Database management |
-| HTML5 | Web page structure |
-| CSS3 | User interface styling |
-| JavaScript | Client-side functionality |
-| Werkzeug | Password hashing and verification |
-| Jinja2 | HTML templating |
-
-## 🏗️ System Architecture
-
-AuthGuard follows a simple client-server architecture.
-
-1. **User Interface:** Users interact with the application through web pages.
-2. **Flask Backend:** Processes registration, login, authentication, and security requests.
-3. **Security Layer:** Performs password verification, CSRF validation, session handling, and login attempt monitoring.
-4. **Database Layer:** SQLite stores user information and security events.
-5. **Response Layer:** Flask returns the requested pages and configured HTTP security headers.
-
-### Application Workflow
-
-```text
-             USER
-               |
-               v
-       AUTHGUARD WEB APP
-               |
-               v
-        FLASK BACKEND
-               |
-       +-------+-------+
-       |               |
-       v               v
-   REGISTER          LOGIN
-       |               |
-       v               v
- PASSWORD           VERIFY
- VALIDATION         PASSWORD
-       |               |
-       v               v
- PASSWORD         LOGIN ATTEMPT
- HASHING           MONITORING
-       |               |
-       v               v
-    SQLITE       AUTHENTICATION
-    DATABASE          |
-                      v
-              SECURITY CONSOLE
-                      |
-                      v
-              SECURITY EVENTS
-```
-
-## Project UI Preview
-
-The following images illustrate the AuthGuard application interface and its authentication security features.
-
-![AuthGuard UI Preview](screenshots/authguard-ui-preview.png)
-
-
-## 📂 Project Structure
+## 10. Project Folder Structure
 
 ```text
 AuthGuard-Web-Authentication-Security/
 │
 ├── app.py
-│
 ├── authguard.db
-│
 ├── requirements.txt
-│
 ├── README.md
+├── authguard-ui-preview.png
+├── authguard-project-overview.png
 │
 ├── templates/
-│   ├── HTML application templates
 │
-├── static/
-│   ├── style.css
-│   └── app.js
-│
-└── screenshots/
-    ├── login.png
-    ├── register.png
-    ├── dashboard.png
-    ├── security-logs.png
-    └── security-check.png
+└── static/
+    ├── style.css
+    └── app.js
 ```
 
-## ⚙️ Installation and Setup
+## 11. Installation and Execution
 
-Follow these steps to run AuthGuard on a Windows computer.
+### Requirements
 
-### Prerequisites
-
-- Python 3.10 or newer.
-- Visual Studio Code (recommended).
-- A modern web browser (Chrome or Microsoft Edge).
+- Python 3.10 or newer
+- Visual Studio Code (recommended)
+- Web browser
 
 ### Step 1: Clone the Repository
-
-Open your terminal and execute:
 
 ```bash
 git clone https://github.com/anubhaabhayan/AuthGuard-Web-Authentication-Security.git
@@ -204,7 +167,7 @@ cd AuthGuard-Web-Authentication-Security
 py -m venv venv
 ```
 
-### Step 4: Activate the Virtual Environment
+### Step 4: Activate the Environment
 
 ```bash
 venv\Scripts\activate
@@ -222,117 +185,88 @@ pip install -r requirements.txt
 python app.py
 ```
 
-### Step 7: Open the Website
-
-Open Chrome or Microsoft Edge and visit:
+### Step 7: Open in Browser
 
 ```text
 http://127.0.0.1:5000
 ```
 
-The AuthGuard application should now be accessible locally.
+The application will be accessible locally.
 
----
+## 12. Project Demonstration
 
-## 🧪 Project Demonstration
-
-The following steps can be used to demonstrate the project during an academic presentation or practical examination.
+The following steps can be used to demonstrate the project:
 
 1. Open the AuthGuard home page.
-2. Explain the purpose of the authentication security application.
-3. Register a new demonstration account.
-4. Show the password complexity validation.
+2. Navigate to the registration page.
+3. Create a demonstration account.
+4. Show password complexity validation.
 5. Log in using the registered credentials.
-6. Open the personal security console.
-7. Log out and attempt to log in using an incorrect password five times.
-8. Demonstrate the temporary two-minute account lockout.
-9. Log in again after the lockout expires.
-10. Show the recorded security events.
-11. Open the Security Check section and explain the configured HTTP security headers.
+6. Access the security console.
+7. Demonstrate failed login attempts and temporary lockout.
+8. Show recorded security events.
+9. Open the Security Check section.
+10. Explain the configured HTTP security headers.
 
-## 🔐 Security Considerations
+## 13. Learning Outcomes
 
-AuthGuard demonstrates several important web authentication security concepts.
+This project helped demonstrate practical concepts related to:
 
-| Security Mechanism | Security Purpose |
-|---|---|
-| Password Hashing | Protects stored passwords |
-| Password Validation | Enforces password complexity |
-| Brute-Force Protection | Limits repeated failed login attempts |
-| Account Lockout | Temporarily restricts repeated failed attempts |
-| CSRF Validation | Protects POST forms against CSRF |
-| Secure Cookies | Improves session cookie protection |
-| Security Headers | Provides additional browser-side security |
-| Event Logging | Records authentication and security events |
+- Web application authentication.
+- Password hashing and verification.
+- Brute-force attack prevention.
+- CSRF protection.
+- Secure session management.
+- HTTP security headers.
+- SQLite database integration.
+- Secure web application development.
 
-## ⚠️ Limitations
+## 14. Limitations
 
-- The application is designed for local educational demonstration.
-- It is not a complete enterprise authentication platform.
-- The two-minute account lockout is intentionally short for classroom demonstration.
-- The application does not perform external website vulnerability scanning.
-- The built-in Flask development server is not intended for production deployment.
+- Designed primarily for educational and local demonstration.
+- Not intended as a complete enterprise authentication platform.
+- Uses a short account lockout period for classroom demonstration.
+- Does not perform external website vulnerability scanning.
+- The Flask development server is not intended for production deployment.
 
-## 🚀 Future Enhancements
+## 15. Future Enhancements
 
-Possible improvements that can be considered in future versions include:
-
-- Multi-factor authentication (MFA).
-- Email-based account verification.
+- Multi-Factor Authentication (MFA).
+- Email verification.
 - Password reset functionality.
 - CAPTCHA integration.
 - Advanced rate limiting.
-- Role-based access control.
-- Enhanced security monitoring and reporting.
-- Deployment using a production-ready web server.
-- Automated security testing.
+- Role-Based Access Control.
+- Enhanced security monitoring.
+- Production deployment.
 
-## 🎓 Project Information
+## 16. Project Information
 
-**Project Name:** AuthGuard – Web Authentication Security
+| Field | Details |
+|---|---|
+| Project Name | AuthGuard – Web Authentication Security |
+| Developed By | Anubha Abhayan |
+| Project Type | MCA Information Security Mini Project |
+| Domain | Cybersecurity |
+| Language | Python |
+| Framework | Flask |
+| Database | SQLite |
+| Frontend | HTML, CSS, JavaScript |
 
-**Project Type:** Information Security Mini Project
+## 17. GitHub Repository
 
-**Domain:** Cybersecurity and Web Application Security
+**Repository Link:**
 
-**Programming Language:** Python
+https://github.com/anubhaabhayan/AuthGuard-Web-Authentication-Security
 
-**Framework:** Flask
+## 18. Disclaimer
 
-**Database:** SQLite
+This project is developed for educational and demonstration purposes. It should not be considered a fully production-ready authentication platform.
 
-**Development Environment:** Visual Studio Code
-
-**Author:** Anubha Abhayan
-
-## 📚 Learning Outcomes
-
-Through this project, the following concepts can be understood and demonstrated:
-
-- Practical implementation of authentication mechanisms.
-- Password hashing and verification.
-- Common authentication vulnerabilities.
-- Brute-force attack prevention.
-- CSRF protection.
-- Session and cookie security.
-- HTTP security headers.
-- Database integration with Flask.
-- Secure web application development.
-
-## ⚠️ Disclaimer
-
-This project is developed strictly for educational and demonstration purposes. It is intended to help understand authentication security mechanisms and basic web application protection.
-
-Do not use real passwords or sensitive personal information while testing.
-
-Before deploying the application publicly, configure a strong random `AUTHGUARD_SECRET`, enable HTTPS and `COOKIE_SECURE=1`, use a production server, and conduct an appropriate security review.
-
-## 🔗 Repository
-
-**GitHub:** https://github.com/anubhaabhayan/AuthGuard-Web-Authentication-Security
+Use demonstration credentials only. Before public deployment, configure a strong secret key, HTTPS, secure cookie settings, a production-ready server, and conduct an appropriate security review.
 
 ---
 
-⭐ If you find this project useful for learning web authentication and security concepts, consider starring the repository.
-
 **Developed by Anubha Abhayan**
+
+*AuthGuard – Because Security Matters!*
