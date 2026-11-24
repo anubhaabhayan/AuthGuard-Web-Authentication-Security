@@ -139,33 +139,12 @@ AuthGuard follows a simple client-server architecture.
               SECURITY EVENTS
 ```
 
-## 📸 Project Screenshots
+## Project UI Preview
 
-The following section presents the main interfaces of the AuthGuard application.
+The following images illustrate the AuthGuard application interface and its authentication security features.
 
-> Upload your actual project screenshots into a folder named `screenshots` in the GitHub repository. Use the filenames shown below or update the paths to match your uploaded images.
+![AuthGuard UI Preview](screenshots/authguard-ui-preview.png)
 
-### 1. Home / Login Page
-
-![AuthGuard Login Page](screenshots/login.png)
-
-### 2. User Registration Page
-
-![AuthGuard Registration Page](screenshots/register.png)
-
-### 3. Personal Security Console
-
-![AuthGuard Security Console](screenshots/dashboard.png)
-
-### 4. Security Events
-
-![AuthGuard Security Events](screenshots/security-logs.png)
-
-### 5. Security Check
-
-![AuthGuard Security Check](screenshots/security-check.png)
-
----
 
 ## 📂 Project Structure
 
